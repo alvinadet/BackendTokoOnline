@@ -1,0 +1,30 @@
+{
+  "name": "pembelian",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "people": {
+      "type": "belongsTo",
+      "model": "people",
+      "foreignKey": ""
+    },
+    "itemPembelians": {
+      "type": "hasMany",
+      "model": "itemPembelian",
+      "foreignKey": ""
+    }
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "acls": [],
+  "methods": {}
+}

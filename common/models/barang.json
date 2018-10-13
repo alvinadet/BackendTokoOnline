@@ -1,0 +1,47 @@
+{
+  "name": "barang",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "namaBarang": {
+      "type": "string",
+      "required": true
+    },
+    "deskripsi": {
+      "type": "string",
+      "required": true
+    },
+    "harga": {
+      "type": "number",
+      "required": true
+    },
+    "kategori": {
+      "type": "string",
+      "required": true
+    },
+    "gambar": {
+      "type": "string",
+      "required": true
+    },
+    "stok": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "itemPembelians": {
+      "type": "hasMany",
+      "model": "itemPembelian",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

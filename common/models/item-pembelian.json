@@ -1,0 +1,36 @@
+{
+  "name": "itemPembelian",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "jumlah": {
+      "type": "number",
+      "required": true
+    },
+    "hargaTotal": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "barang": {
+      "type": "belongsTo",
+      "model": "barang",
+      "foreignKey": ""
+    },
+    "pembelian": {
+      "type": "belongsTo",
+      "model": "pembelian",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
